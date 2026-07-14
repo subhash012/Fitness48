@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-background text-text antialiased;
+  background-image:
+    radial-gradient(circle at top, rgba(225, 29, 72, 0.18), transparent 30%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.03), transparent 20%),
+    linear-gradient(135deg, #050505 0%, #0b0b0b 50%, #090909 100%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+::selection {
+  background: rgba(225, 29, 72, 0.35);
+  color: white;
+}
+
+a {
+  @apply transition-colors duration-200;
+}
+
+.glass {
+  @apply border border-white/10 bg-white/5 backdrop-blur-xl shadow-glow;
+}
+
+.section-padding {
+  @apply px-4 py-16 sm:px-6 lg:px-8 lg:py-24;
+}
+
+.container-width {
+  @apply mx-auto w-full max-w-7xl;
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, #ffffff 0%, #ffffff 45%, #fda4af 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
